@@ -1,18 +1,13 @@
 // @ts-check
-let winner = 0;
 let numToGuess = 22
-let answer = Number(prompt("Essayez de deviner le nombre, bonne chance !", ""))
-//while (winner = 0){
-if (answer == numToGuess){
-    alert("Félicitations ! Vous avez trouvé le le nombre.")
-    winner=1
+let answer
+while (answer != numToGuess){
+    answer = Number(prompt("Essayez de deviner mon nombre, bonne chance !", ""))
+    if (answer < numToGuess){
+        alert("Raté, mon nombre est plus grand")  
+    }
+    else if (answer > numToGuess){
+        alert("Raté, mon nombre est plus petit")
+    }
 }
-else if (answer < numToGuess){
-    alert("Raté, mon numéro est plus grand")  
-    winner=0
-}
-else if (answer > numToGuess){
-    alert("Raté, mon numéro est plus petit")
-    winner=0
-  }
-//}
+alert("Félicitations ! Vous avez trouvé le bon nombre.")
